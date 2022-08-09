@@ -4,6 +4,13 @@ import DataContext from "./Context/DataContext";
 function MainTile() {
   const { weatherData, loading } = useContext(DataContext);
 
+  if (weatherData.error) {
+    return (
+      <h2>
+        Location could not be found.<br></br> Try broader search
+      </h2>
+    );
+  }
 
   return (
     <div className="main-tile">

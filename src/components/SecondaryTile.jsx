@@ -4,6 +4,10 @@ import DataContext from "./Context/DataContext";
 function SecondaryTile() {
   const { weatherData, loading } = useContext(DataContext);
 
+  if(weatherData.error) {
+    return;
+  }
+
   return (
     <div className="secondary-tile">
       {loading && <h2>Loading...</h2>}
