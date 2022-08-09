@@ -4,22 +4,27 @@ import DataContext from "./Context/DataContext";
 function MainTile() {
   const { weatherData, loading } = useContext(DataContext);
 
+
   return (
     <div className="main-tile">
-      {loading && (<h2>Loading...</h2>)}
+      {loading && <h2>Loading...</h2>}
       {!loading && (
         <>
           <div className="left-side">
             <img
               className="weather-logo"
-              src="http://openweathermap.org/img/wn/10d@2x.png"
+              src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
               alt="weather icon"
             />
-            <p className="temperature">{weatherData.main.temp.toFixed()} &#176;C</p>
+            <p className="temperature">
+              {weatherData.main.temp.toFixed()} &#176;C
+            </p>
           </div>
           <div className="right-side">
             <div className="right-upper">
-              <p className="location">{weatherData.name}, {weatherData.sys.country}</p>
+              <p className="location">
+                {weatherData.name}, {weatherData.sys.country}
+              </p>
             </div>
             <div className="right-down">
               <div className="right-down-left">
@@ -28,7 +33,9 @@ function MainTile() {
               </div>
               <div className="right-down-right">
                 <p className="feels-like">Feels Like</p>
-                <p className="feels-like_show">{weatherData.main.feels_like.toFixed()} &#176;C</p>
+                <p className="feels-like_show">
+                  {weatherData.main.feels_like.toFixed()} &#176;C
+                </p>
               </div>
             </div>
           </div>
