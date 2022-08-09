@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import DataContext from "./Context/DataContext";
-/* eslint-disable */
+
 function SeachForm() {
   const [location, setLocation] = useState("");
   const { fetchData } = useContext(DataContext);
