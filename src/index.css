@@ -9,8 +9,10 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   background: url("./assets/images/few-clouds.jpg");
-  background-position: center;
+  background-position: center center fixed;
+  background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 #root {
@@ -27,8 +29,8 @@ body {
   left: 0;
   z-index: -1;
   background-color: rgba(0, 0, 0, 0.4);
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .search-form {
@@ -52,7 +54,7 @@ body {
 }
 
 #search::placeholder {
-    color: #dbdbdbc6;
+  color: #dbdbdbc6;
 }
 
 .footer {
@@ -67,4 +69,72 @@ body {
   font-size: 1.2rem;
   text-decoration: none;
   color: #fff;
+}
+
+.main-tile {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+.left-side {
+  border-right: 1.5px solid #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-side {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.right-upper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.right-down {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.right-down-left,
+.right-down-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-logo {
+  height: 150px;
+  width: 150px;
+}
+
+.temperature {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.weather,
+.feels-like {
+  font-size: 1rem;
+  letter-spacing: 2.5px;
+  color: #ffffffbd;
+}
+.weather_show,
+.feels-like_show {
+  font-size: 2.5rem;
 }
