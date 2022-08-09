@@ -1,5 +1,6 @@
 import SeachForm from "./components/SeachForm";
 import MainTile from "./components/MainTile";
+import SecondaryTile from "./components/SecondaryTile";
 import Footer from "./components/Footer";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <div className="overlay"></div>
       <SeachForm />
       <MainTile />
+      <SecondaryTile />
       <Footer />
     </>
   );
