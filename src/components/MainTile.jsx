@@ -1,9 +1,15 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import DataContext from "./Context/DataContext";
 /* eslint-disable */
 function MainTile() {
-  const { weatherData, loading } = useContext(DataContext);
+  const { weatherData, loading, changeCover } = useContext(DataContext);
 
+  useEffect(() => {
+    if (!loading) {
+      changeCover();
+    }
+  }, [weatherData]);
+  
   if (weatherData.error) {
     return (
       <h2>

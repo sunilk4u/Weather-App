@@ -6,13 +6,13 @@
 }
 
 body {
-  min-height: 100vh;
-  min-width: 100vw;
-  background: url("./assets/images/few-clouds.jpg");
-  background-position: center center fixed;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
+  transition: background 0.5s ease-out;
 }
 
 #root {
