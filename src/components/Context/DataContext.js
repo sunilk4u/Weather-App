@@ -5,7 +5,7 @@ const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
   const [weatherData, setWeatherData] = useState({});
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchData("New Delhi");
