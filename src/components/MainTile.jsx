@@ -13,7 +13,7 @@ function MainTile() {
   if (weatherData.error) {
     return (
       <h2>
-        Location could not be found.<br></br> Try broader search
+        Location could not be found.<br></br> Try city level location.
       </h2>
     );
   }

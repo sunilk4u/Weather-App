@@ -42,6 +42,9 @@ export const DataProvider = ({ children }) => {
   };
   /* eslint-disable */
   const changeCover = () => {
+    if (weatherData.error) {
+      return
+    }
     const weather_id = weatherData.weather[0].id;
     const target = document.querySelector("body");
 
