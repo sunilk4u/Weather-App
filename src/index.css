@@ -13,6 +13,7 @@ body {
   background-size: cover;
   overflow-x: hidden;
   transition: background 0.5s ease;
+  transition-delay: 1.5s;
 }
 
 #root {

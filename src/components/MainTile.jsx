@@ -26,7 +26,7 @@ function MainTile() {
           <div className="left-side">
             <img
               className="weather-logo"
-              src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
+              src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
               alt="weather icon"
             />
             <p className="temperature">
